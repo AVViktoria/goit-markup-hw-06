@@ -185,8 +185,8 @@ img {
   color: var(--main-txt-cl);
 }
 
-.header-list .link:hover,
-.header-list .link:focus {
+.header-container .link:hover,
+.header-container .link:focus {
   color: var(--accent-cl);
 }
 
