@@ -73,8 +73,34 @@
                 <svg class="modal-icon" width="14" height="14">
                   <use href="./images/icons.svg/symbol-defs-opt.svg#icon-close-black"></use>
                 </svg>
+                <div class="modal-form">
+                  <h2>Оставьте свои данные, мы вам перезвоним</h2>
+                  <form class="speaker-wrapper">
+                    <div class="speaker-form" role="group">
+                      <label for="name">Имя</label>
+                      <input type="text" name="name" id="name" placeholder="E-mail" />
+
+                      <label for="name">Телефон</label>
+                      <input type="tel" name="tel" id="tel" placeholder="E-mail" />
+
+                      <label for="name">Почта</label>
+                      <input type="email" name="mail" id="mail" placeholder="E-mail" />
+
+                      <label for="name">Комментарий</label>
+                      <input type="text" name="comment" id="comment" placeholder="Введите текст" />
+                    </div>
+
+                    <div class="modal-agreement">
+                      <input type="checkbox" value="agreement" id="agreement" />
+                      <p>
+                        Соглашаюсь с рассылкой и принимаю
+                        <a class="link" href="">Условия договора</a>
+                      </p>
+                    </div>
+                    <button class="btn" type="submit">Отправить</button>
+                  </form>
+                </div>
               </button>
-              <!-- <form action="" class="modal-form"></form> -->
             </div>
           </div>
         </div>
@@ -601,14 +627,23 @@
           </ul>
         </div>
         <div class="form-footer">
-          <p><b>Подпишитесь на рассылку</b></p>
-          <form class="form-url-request">
-            <input type="text" name="url" placeholder="E-mail" />
+          <p class="title"><b>Подпишитесь на рассылку</b></p>
+          <form class="form-request">
+            <input type="text" name="e-mail" placeholder="E-mail" />
             <button class="btn" type="submit">Подписаться</button>
           </form>
         </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('.submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, e-mail) => console.log('${e-mail}: ${value}'));
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -235,7 +235,8 @@ img {
   text-transform: uppercase;
 }
 
-.hero .btn {
+.hero .btn,
+.form-footer .btn {
   border-radius: 4px;
   padding: 10px 32px;
   background-color: #2196f3;
@@ -252,7 +253,9 @@ img {
 }
 
 .hero .btn:hover,
-.hero .btn:focus {
+.hero .btn:focus,
+.form-footer .btn:hover,
+.form-footer .btn:focus {
   background-color: #188ce8;
 }
 
@@ -642,9 +645,11 @@ img {
 
 .icon-footer {
   display: block;
+  margin-right: 93px;
 }
 
-.icon-footer .title {
+.icon-footer .title,
+.form-footer .title {
   margin-bottom: 20px;
   font-style: normal;
   font-size: 14px;
@@ -653,6 +658,7 @@ img {
 
   color: var(--main-white-cl);
 }
+
 .icon-footer .icon-list {
   display: flex;
   justify-content: center;
@@ -690,6 +696,47 @@ img {
   height: 20px;
   fill: var(--main-white-cl);
 }
+
+/* 
+============================
+| Subscribe section / Подпишитесь на рассылку
+============================
+*/
+
+.form-footer .btn {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 29px;
+  padding-right: 28px;
+}
+.form-footer .btn::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url('../images/icons.svg/icon-send.svg');
+  background-size: contain;
+}
+
+.form-footer .text {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .form-request {
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 295px; 
+}*/
 
 /* 
 Portfolio
