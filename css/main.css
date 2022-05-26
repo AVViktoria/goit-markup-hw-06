@@ -382,8 +382,8 @@ img {
   cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: none;
-  transition: outline var(--main-animation), border-color var(--main-animation);
+  outline: transparent;
+  transition: border-color var(--main-animation);
 }
 
 .form-input:hover,
@@ -883,7 +883,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  outline: none;
+  outline: transparent;
   cursor: pointer;
 }
 
